@@ -1,0 +1,117 @@
+@mixin fonts($fontFamily: 'sans-serif', $color: black, $align: left, $ttransform: capitalize) {
+	color: $color;
+	font-family: $fontFamily;
+	text-align: $align;
+	text-transform: $ttransform;
+}
+
+@mixin imagePos($floatImg, $margin... ) {
+	float: $floatImg;
+	@each $i in $margin {
+		margin: #{$i};
+	}
+}
+
+body {
+	background-color:$pageBackground;
+	font-family: $main-font;
+	font-size: 15px;
+}
+
+#content {
+  background: $contentBackground;
+  margin: 0 auto;
+  padding: 20px;
+  width: 960px;
+}
+
+h1 {
+	@include fonts($main-font, $headColor, center, $upperCase)
+}
+
+h2 {
+	@include fonts($main-font, $head_color)
+}
+
+img {
+	border: 2px solid $borderColor;
+	padding: 2px;
+}
+
+a {
+	color: $linkColor;
+}
+
+p {
+	color: $mainColorText;
+}
+
+.img-left {
+	@include imagePos(left,0 20px 9px 0)
+}
+
+.img-right {
+	@include imagePos(right ,0 0 0 20px)
+}
+
+table {
+	caption {
+		color: $captColor;
+		text-align: right;
+	}
+	th {
+		padding: 10px;
+    text-align: left;
+    color: $tableHeadColor;
+    text-transform: uppercase;
+    background-color: $tableHeadBackgr;
+	}
+	td {
+		color: $mainColorText;
+		padding: 10px;
+		background-color: $tableBackgrColor;
+		border-collapse: collapse;
+		border-bottom: 1px solid #e0e0e0;
+	}
+}
+
+.brief {
+	background-color: $briefBackgr;
+	width: $briefWidth;
+	float: $left;
+	margin-right: $briefMargR;
+	margin-bottom: $briefMargB;
+	padding: $briefPad;
+} 
+
+.contact-form {
+	text-transform: uppercase;
+	 
+	.form-group {
+		width: 100%;
+		margin-top: 5px;
+		color: $formColor;
+		text-transform: uppercase;
+		.form-control {
+			width: 98%;
+			padding: 5px;
+			border: 1px solid $formColor;
+		}
+	}
+
+	.col-left, .col-right {
+		width: 49%;
+		display: inline-block;
+		margin-right: 5px;
+	}
+	
+	.button {
+    background-color: transparent;
+    padding: 10px 60px 10px 60px;
+    border: 1px solid $linkColor;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: $linkColor;
+    margin-top: 20px;
+	}
+}
