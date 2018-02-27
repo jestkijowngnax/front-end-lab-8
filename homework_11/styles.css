@@ -1,0 +1,21 @@
+.folder-name {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.folder-name:hover {
+    background-color: #c0c0c04f;
+}
+
+.material-icons {
+    font-size: 18px;
+    color: orange;
+    padding-right: 2px;
+}
+
+ul {
+    list-style-type: none;
+}
