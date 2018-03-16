@@ -1,154 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
-	<title>hw</title>
-	<link rel="stylesheet" href="style.css">
-</head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
+	<link rel="stylesheet/less" type="text/css" href="styles/variables.less">
+	<link rel="stylesheet/less" type="text/css" href="styles/styles.less">
+</head>
 <body>
-	<div id="wrapper">
-		<div id="main">
-			<div id="container">
-				<div id="content" role="main">
-					<header>
-						<img src="EPAM_logo.svg" alt="epam">
-						<nav>
-							<a href="#html"><b>HTML</b></a>
-							<a href="#lists"><b>List</b></a>
-							<a href="#tables"><b>Table</b></a>
-							<a href="#textFormat"><b>Text formats</b></a>
-							<a href="#blockquotes"><b>Blockquotes</b></a>
-						</nav>
-					</header>
-					<section>
-						<hr>
-						<h1 id='html'>HTML Elements</h1>
-						<hr>
-						<h2 id='lists'>Ordered list</h2>
-						<ul>
-							<li><h1>Heading 1</h1>
-								<ul>
-									<li><h2>Heading 2</h2>
-										<ul>
-											<li><h3>Heading 3</h3></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-						<ul>
-							<li type='1'><h4>Heading 4</h4>
-								<ul>
-									<li type='A'><h5>Heading 5</h5>
-										<ul>
-											<li type='i'><h6>Heading 6</h6></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Definition List</h3>
-						<dl>
-							<dt><b>defines terms 1</b></dt>
-							<dd>description 1</dd>
-							<dt>defines terms 2</dt>
-							<dd>description 2</dd>
-						</dl>
-					</section>
-					<section>
-						<h2>Details</h2>
-						<details open>
-							<summary>Even more details open</summary>
-							<p>Here are even more details about the details.</p>
-						</details>
-						<details>
-							<summary>Even more details close</summary>
-							<p>Here are even more details about the details.</p>
-						</details>
-					</section>
-					<hr>
-					<section>
-						<h2 id='tables'>Table</h2>
-						<table>
-							<thead>
-								<tr>
-									<th>Elements</th>
-									<th>Elements</th>
-									<th>Elements</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><strong>strong</strong></td>
-									<td>H<sub>2</sub>O</td>
-									<td><a href="#">Test link</a></td>
-								</tr>
-								<tr>
-									<td><i>Italic</i></td>
-									<td><u>Underline</u></td>
-									<td><del>Delete</del></td>
-								</tr>
-								<tr>
-									<td><abbr>Abbreviation</abbr></td>
-									<td>5<sup>3</sup> = 125</td>
-									<td><ins>inserted</ins></td>
-								</tr>
-							</tbody>
-						</table>
-					</section>
-					<hr>
-					<section>
-						<h2 id='textFormat'>Text formats</h2>
-						<h3>section Text</h3>
-					</section>
-					<section>
-						<h2>section title</h2>
-						<p>section description</p>
-					</section>
-					<section>
-						<h3>Preformatted Text</h3>
-						<pre>
-							Text
-							in a pre element
-							is displayed in a fixed-width
-							font, and it preserves
-							both           spaces and
-							line breaks
-						</pre>
-					</section>
-					<section>
-						<h3>Code</h3>
-						<pre>
-							<code>
-								.wrapper {
-								display: grid;
-								grid-template-columns: repeat(3, 1fr);
-								grid-gap: 10px;
-								grid-auto-rows: minmax(100px, auto);
-							}
-						</code>
-					</pre>
-				</section>
-				<hr>
-				<section>
-					<h2 id='blockquotes'>Blockquotes</h2>
-					<p>Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
-					<blockquote>
-						Technology is nothing. What's important is that you have a faith in people, that they're basically good and smart, and if you give them tools, they'll do wonderful things with them.<br>
-						<a href="#">Steve Jobs</a>
-					</blockquote>
-				</section>
-				<footer>
-					<p>Copyright Epam Systems</p>
-				</footer>
+	<header>
+		<nav class="navbar navbar-expand-md navbar-light bg-light">
+			<div class="container">
+				<img class="navbar-brand" src="img/logo.png">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-item nav-link active" href="#">Classes <span class="sr-only">(current)</span></a>
+						<a class="nav-item nav-link" href="#">About us</a>
+						<a class="nav-item nav-link" href="#">Contacts</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<main>
+		<section class="container">
+			<h1 class="txt-edit">Yoga Pilates</h1>
+			<hr>
+			<div class="row">
+				<div class="col-lg-8 col-md-12 col-sm-12">
+					<img class="img-fluid" src="img/yoga.jpg">
+				</div>
+				<div class="col-lg-4 col-md-12 col-sm-12">
+					<h2 class="txt-edit">Class description</h2>
+					<p>This workout uses a series of exercise routines designed to increase your core strength & improve your posture, energy, & flexibility. Pilates work is powered by breath, flow, & centering. By focusing on the mind-body connection & using more efficient form, this workout helps develop a stronger, leaner, healthier body. Appropriate for all fitness levels.</p>
+					<ul>
+						<li>One Personal Trainer</li>
+						<li>Big gym space for training</li>
+						<li>Free tools & props</li>
+						<li>Free locker</li>
+						<li>Free before / after shower</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="container">
+			<h2 class="txt-edit">Related classes</h2>
+			<hr>
+			<div class="row pos-box">
+				<div class="col-lg-3 col-md-3 col-sm-6">
+					<figure class="figure red">
+						<img src="img/cardio-kickbox.jpg" class="figure-img img-fluid red-img" alt="">
+						<figcaption class="figure-caption sub-txt">Cardio kickboxing</figcaption>
+					</figure>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6">
+					<figure class="figure blue">
+						<img src="img/fitness.jpg" class="figure-img img-fluid blue-img" alt="">
+						<figcaption class="figure-caption sub-txt">Fitness</figcaption>
+					</figure>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6">
+					<figure class="figure yellow">
+						<img src="img/zumba.jpg" class="figure-img img-fluid yellow-img" alt="">
+						<figcaption class="figure-caption sub-txt">Zumba</figcaption>
+					</figure>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6">
+					<figure class="figure green">
+						<img src="img/bootcamp.jpg" class="figure-img img-fluid green-img" alt="">
+						<figcaption class="figure-caption sub-txt">Bootcamp</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class=" footer">
+		<div class="container">
+			<div>
+				<span>&copy Epam Front-end lab, 2018</span>
 			</div>
 		</div>
-	</div>
-</div>
+	</footer>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/less.min.js"></script>
 </body>
 
 </html>
