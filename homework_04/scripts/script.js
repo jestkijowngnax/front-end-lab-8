@@ -14,15 +14,15 @@ function assign(target, defaults, options) {
   return result;
 }
 
-function Fighter(name, attack, hitpoints) {
-  this.name = name; 
-  this.attack = attack;
-  this.hitpoints = hitpoints;
-  this.totalHitpoints = hitpoints;
-  this.getHitPoints = function() {
+function Fighter(fighter) {
+  this.name = fighter.name; 
+  this.attack = fighter.attack;
+  this.hitpoints = fighter.hitpoints;
+  this.totalHitpoints = fighter.hitpoints;
+  this.getHitpoints = function() {
     return this.hitpoints;
   }
-  this.setHitPoints = function(hitpoints) {
+  this.setHitpoints = function(hitpoints) {
     this.hitpoints = hitpoints;
   }
   this.getTotalHitpoints = function() {
@@ -52,7 +52,7 @@ function Fighter(name, attack, hitpoints) {
 }
 
 
-function Champion(name, attack, hitpoints) {
+function Champion(fighter) {
   Fighter.apply(this, arguments);
   var fighterFight = this.fight;
   var isDefence = false;
@@ -81,7 +81,7 @@ function Champion(name, attack, hitpoints) {
   }
 }
 
-function Monster(name, attack, hitpoints) {
+function Monster(fighter) {
   Fighter.apply(this, arguments);
   var fighterFight = this.fight;
   var enrage = 0;
@@ -118,8 +118,8 @@ function Monster(name, attack, hitpoints) {
 }
 
 
-var hunter = new Champion({name: ‘Rexxar’, attack: 10, hitpoints: 60});
-var beast = new Monster({name: ‘King Krush’, attack: 8, hitpoints: 80});
+var hunter = new Champion({name: 'Rexxar', attack: 10, hitpoints: 60});
+var beast = new Monster({name: 'King Krush', attack: 8, hitpoints: 80});
 
 hunter.fight(beast);
 beast.getHitpoints();
